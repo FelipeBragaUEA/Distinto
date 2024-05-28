@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produto Registrado</title>
+    <title>Informações do Produto</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
 
 </head>
 <body class="bg-light">
-    <div class="container mt-5 text-center">
-        <h2>Produto Registrado com Sucesso</h2>
-        <img src="{{ url_for('static', filename=qr_code_path) }}" alt="QR Code" class="img-fluid my-4">
-        <h3>Detalhes do Produto</h3>
+    <div class="container mt-5">
+        <h2>Informações do Produto</h2>
         <p><strong>Nome:</strong> {{ product.name }}</p>
         <p><strong>Número de Série:</strong> {{ product.serial_number }}</p>
         <p><strong>Marca:</strong> {{ product.brand }}</p>

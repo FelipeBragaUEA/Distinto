@@ -1,11 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Blockchain Product Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain App</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+
 </head>
-<body>
-    <h1>Blockchain Product Registration</h1>
-    <a href="{{ url_for('register_product') }}">Register Product</a>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Bem-vindo ao Blockchain App</h1>
+            <p class="lead">Gerencie seus produtos com a segurança do blockchain.</p>
+            <a href="{{ url_for('register_product') }}" class="btn btn-primary btn-lg">Registrar Produto</a>
+            <a href="{{ url_for('scan_qr_code') }}" class="btn btn-secondary btn-lg">Ler QR Code</a>
+        </div>
+    </div>
 </body>
 </html>

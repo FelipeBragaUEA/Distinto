@@ -3,24 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Produto</title>
+    <title>Registrar Produto</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+
 </head>
-<body>
-    <h1>Adicionar Produto</h1>
-    <form action="{{ url_for('add_product') }}" method="post">
-        <label for="name">Nome:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="serial_number">Número de Série:</label><br>
-        <input type="text" id="serial_number" name="serial_number"><br>
-        <label for="brand">Marca:</label><br>
-        <input type="text" id="brand" name="brand"><br>
-        <label for="acquisition_date">Data de Aquisição:</label><br>
-        <input type="date" id="acquisition_date" name="acquisition_date"><br>
-        <label for="creation_date">Data de Criação:</label><br>
-        <input type="date" id="creation_date" name="creation_date"><br>
-        <label for="owner">Proprietário:</label><br>
-        <input type="text" id="owner" name="owner"><br><br>
-        <input type="submit" value="Adicionar Produto">
-    </form>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2>Registrar Produto</h2>
+        <form action="{{ url_for('add_product') }}" method="post">
+            <div class="form-group">
+                <label for="name">Nome do Produto</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="serial_number">Número de Série</label>
+                <input type="text" class="form-control" id="serial_number" name="serial_number" required>
+            </div>
+            <div class="form-group">
+                <label for="brand">Marca</label>
+                <input type="text" class="form-control" id="brand" name="brand" required>
+            </div>
+            <div class="form-group">
+                <label for="acquisition_date">Data de Aquisição</label>
+                <input type="date" class="form-control" id="acquisition_date" name="acquisition_date" required>
+            </div>
+            <div class="form-group">
+                <label for="creation_date">Data de Criação</label>
+                <input type="date" class="form-control" id="creation_date" name="creation_date" required>
+            </div>
+            <div class="form-group">
+                <label for="owner">Proprietário</label>
+                <input type="text" class="form-control" id="owner" name="owner" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
 </body>
 </html>

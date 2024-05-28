@@ -1,0 +1,17 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.jumbotron {
+    background-color: #e9ecef;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.btn-primary, .btn-secondary {
+    margin: 10px;
+}

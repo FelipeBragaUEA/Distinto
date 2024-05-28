@@ -8,6 +8,7 @@ blockchain = Blockchain(difficulty=4)
 
 # Cria a pasta para armazenar os QR Codes se não existir
 os.makedirs('static/qrcodes', exist_ok=True)
+os.makedirs('static/uploaded_qrcodes', exist_ok=True)
 
 create_routes(app, blockchain)
 
