@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto Adicionado</title>
+</head>
+<body>
+    <h1>Produto Adicionado com Sucesso!</h1>
+    <p><strong>Nome:</strong> {{ product.name }}</p>
+    <p><strong>Número de Série:</strong> {{ product.serial_number }}</p>
+    <p><strong>Marca:</strong> {{ product.brand }}</p>
+    <p><strong>Data de Aquisição:</strong> {{ product.acquisition_date }}</p>
+    <p><strong>Data de Criação:</strong> {{ product.creation_date }}</p>
+    <p><strong>Proprietário:</strong> {{ product.owner }}</p>
+    <p><strong>QR Code:</strong></p>
+    <img src="{{ url_for('static', filename=qr_code_path) }}" alt="QR Code">
+</body>
+</html>
